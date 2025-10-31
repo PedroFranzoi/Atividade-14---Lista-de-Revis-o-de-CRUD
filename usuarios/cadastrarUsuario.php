@@ -36,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar usuarios</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <h1>Cadastrar Usuario</h1>
@@ -52,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <button type="submit">Criar</button>
     <br>
     <br>
-    <a href="../index.php">Voltar</a>
+    <a href="../index.php">Voltar para tela inicial</a>
 
     </form>
 
