@@ -8,6 +8,9 @@
 <body>
 
     <a href="usuarios/cadastrarUsuario.php">Cadastrar usuarios</a>
+    <br>
+    <br>
+    <a href="tarefas/criarTarefas.php">Criar tarefas</a>
     
 </body>
 </html>

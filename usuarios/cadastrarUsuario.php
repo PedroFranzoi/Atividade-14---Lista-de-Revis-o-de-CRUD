@@ -1,3 +1,35 @@
+<?php
+include '../db/db.php';
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+
+
+    $sql = "INSERT INTO usuarios (nome,email) VALUE ('$nome','$email')";
+
+
+
+    if($conn->query($sql) === true){
+        echo "Cadastrado com sucesso.";
+    } else{
+        echo "Erro " . $sql . '<br>' . $conn->error;
+    }
+    $conn->close();
+
+
+
+
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +49,6 @@
     <input type="text" name="email" required>
     <br>
     <br>
-
     <button type="submit">Criar</button>
     <br>
     <br>
