@@ -13,3 +13,18 @@ body{
     text-align: center;
     font-size: large;
 }
+
+#fazer{
+    background-color: rgb(68, 68, 202);
+    border: 5px solid black;
+}
+
+#fazendo{
+    background-color: rgb(202, 202, 68);
+    border: 5px solid black;
+}
+
+#pronto{
+    background-color: rgb(68, 202, 68);
+    border: 5px solid black;
+}
