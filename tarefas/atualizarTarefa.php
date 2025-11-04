@@ -5,7 +5,11 @@ $sqlUsuario = "SELECT id,nome FROM usuarios";
 $resultUsuarios = $conn->query($sqlUsuario);
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM tarefas WHERE id = $id";
+
+$sql = "SELECT descricao,nomeSetor,prioridade,dataCadastro,statusTarefa FROM tarefas WHERE id = $id";
+
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $descricao = $_POST['descricao'];
@@ -15,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $usuario = $_POST['usuario'];
     $statusTarefa = $_POST['statusTarefa'];
 
-    $sql = "UPDATE tarefas SET descricao = '$descricao' , nomeSetor = '$nomeSetor', prioridade = '$prioridade', dataCadastro = '$dataCadastro', idUsuario = '$usuario', statusTarefa = '$statusTarefa' WHERE id = $id)";
+    $sql = "UPDATE tarefas SET descricao = '$descricao' , nomeSetor = '$nomeSetor', prioridade = '$prioridade', dataCadastro = '$dataCadastro', idUsuario = '$usuario', statusTarefa = '$statusTarefa' WHERE id=$id)";
 
  
 
@@ -30,8 +34,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 
-$result = $conn ->query($sql);
-$row = $result->fetch_assoc();
 
 
 
@@ -50,14 +52,14 @@ $row = $result->fetch_assoc();
     <h1>Criar tarefa</h1>
 
 
-    <form method="post" action="criarTarefas.php">
+    <form method="post" action="atualizarTarefas.php">
 
         <label for="nome">Descrição:</label>
-        <input type="text" name="descricao" required VALUE="<php echo $row['descricao']; ?>">
+        <input type="text" name="descricao" required VALUE="<?php echo $row['descricao']; ?>">
         <br>
         <br>
         <label for="nome">Nome do setor:</label>
-        <input type="text" name="nomeSetor" required VALUE="<php echo $row['nomeSetor']; ?>">
+        <input type="text" name="nomeSetor" required VALUE= "<?php echo $row['nomeSetor']; ?>">
         <br>
         <br>
         <label for="prioridade">Prioridade:</label>
@@ -70,7 +72,7 @@ $row = $result->fetch_assoc();
         <br>
         <br>
         <label for="nome">Data de criação:</label>
-        <input type="date" name="dataCadastro" required VALUE="<php echo $row['dataCadastro']; ?>">
+        <input type="date" name="dataCadastro" required VALUE = "<?php echo $row['dataCadastro']; ?>">
         <br>
         <br>
         <label for="statusTarefa">Status:</label>
