@@ -72,8 +72,8 @@ while ($row = $result->fetch_assoc()) {
                                             <td><?= $t['prioridade'] ?></td>
                                             <td><?= $t['dataCadastro'] ?></td>
                                             <td><?= $t['responsavel'] ?></td>
-                                            <td> <a href="tarefas/atualizarTarefa.php?id={$row['id']}">Ediatar</a></td>
-                                            <td> <a href="tarefas/deletarTarefa?id={$row['id']}">Deletra</a></td>
+                                            <td> <a href="tarefas/atualizarTarefa.php?id=<?= $t['idTarefa'] ?>">Editar</a></td>
+                                            <td> <a href="tarefas/deletarTarefa.php?id=<?= $t['idTarefa'] ?>">Deletar</a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>
@@ -98,8 +98,8 @@ while ($row = $result->fetch_assoc()) {
                                         <td><?= $t['prioridade'] ?></td>
                                         <td><?= $t['dataCadastro'] ?></td>
                                         <td><?= $t['responsavel'] ?></td>
-                                        <td> <a href="tarefas/atualizarTarefa.php?id={$row['id']}">Ediatar</a></td>
-                                        <td> <a href="tarefas/deletarTarefa?id={$row['id']}">Deletra</a></td>
+                                        <td> <a href="tarefas/atualizarTarefa.php?id=<?= $t['idTarefa'] ?>">Editar</a></td>
+                                        <td> <a href="tarefas/deletarTarefa.php?id=<?= $t['idTarefa'] ?>">Deletar</a></td>
                                     </tr>
                                 <?php } ?>
                             </table>
@@ -124,8 +124,8 @@ while ($row = $result->fetch_assoc()) {
                                     <td><?= $t['prioridade'] ?></td>
                                     <td><?= $t['dataCadastro'] ?></td>
                                     <td><?= $t['responsavel'] ?></td>
-                                    <td> <a href="tarefas/atualizarTarefa.php?id={$row['id']}">Ediatar</a></td>
-                                    <td> <a href="tarefas/deletarTarefa?id={$row['id']}">Deletra</a></td>
+                                    <td> <a href="tarefas/atualizarTarefa.php?id=<?= $t['idTarefa'] ?>">Editar</a></td>
+                                    <td> <a href="tarefas/deletarTarefa.php?id=<?= $t['idTarefa'] ?>">Deletar</a></td>
                                 </tr>
                             <?php } ?>
                         </table>
@@ -140,4 +140,4 @@ while ($row = $result->fetch_assoc()) {
 </html>
 <div>
 
-    
+
